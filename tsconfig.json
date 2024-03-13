@@ -26,7 +26,11 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/__test__/page.test.jsx"
+    "src/__test__/page.test.jsx",
+    "src/__test__/api.banks.route.test.js",
+    "src/__test__/BankList.test.jsx",
+    "src/__test__/AppStore.test.js",
+    "src/__test__/BankItem.test.jsx"
   ],
   "exclude": ["node_modules"]
 }

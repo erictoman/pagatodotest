@@ -34,6 +34,11 @@ export default function RootLayout({
           <h1>Prueba tecnica</h1>
         </header>
         <main>{children}</main>
+        <footer>
+          <p className="text-center">
+            Prueba tecnica por Eric Uriel Trejo Trejo
+          </p>
+        </footer>
       </body>
     </html>
   );

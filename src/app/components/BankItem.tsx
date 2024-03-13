@@ -1,13 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
 import { Bank } from "../types";
 
-const BankItem = ({ bank, onClick }: { bank: Bank; onClick?: () => void }) => {
+const BankItem = ({
+  bank,
+  onRemove,
+}: {
+  bank: Bank;
+  onRemove?: () => void;
+}) => {
   return (
     <article
-      className="flex flex-col md:flex-row bg-white p-3 max-h w-[250px] md:h-[230px] md:w-[320px] md:h-[250px] rounded-lg"
-      onClick={onClick}
-      data-testid="bankItem"
+      className="flex flex-col md:flex-row bg-white p-3 max-h w-[250px] md:h-[230px] md:w-[320px] md:h-[250px] rounded-lg relative"
+      data-testid="bank-item"
     >
+      <button
+        className="absolute z-10 top-[-10px] right-[-10px] bg-red-300 h-[24px] w-[24px] rounded-full"
+        onClick={onRemove}
+      >
+        X
+      </button>
       <div className="flex flex-col md:justify-between">
         <h3>{bank.bankName}</h3>
         <img
